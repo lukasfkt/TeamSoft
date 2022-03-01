@@ -1,6 +1,6 @@
 # TeamSoft
 
-<p>Desafio criado pela TeamSoft para desenvolver uma página de compra de comida. Links do desafio:</p>
+<p>Desafio criado pela TeamSoft para desenvolver uma página de delivery. Links do desafio:</p>
 <b>Desafio:</b> https://github.com/Teamsoftbr/join-frontend/blob/main/README.md <br>
 <b>Figma: </b> https://www.figma.com/file/1RWDOOFeh5836Y4KruOl5w/FrontEnd?node-id=5%3A717
 
