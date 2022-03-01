@@ -1,0 +1,459 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+}
+
+:root {
+  font-size: 62.5%;
+}
+
+body {
+  h3 {
+    color: #4e4e4e;
+    font-size: 1.8rem;
+  }
+  h4 {
+    color: #4e4e4e;
+    font-size: 1.4rem;
+  }
+  width: 100%;
+  header {
+    display: flex;
+    position: relative;
+    width: 100%;
+    height: 5.6rem;
+    background-color: #f4f4f4;
+    align-items: center;
+    justify-content: center;
+    .cabecalho-centro {
+      display: none;
+    }
+    .arrow {
+      position: absolute;
+      top: 2.2rem;
+      left: 2.429rem;
+    }
+    .logo {
+      width: 15rem;
+      height: 3.2rem;
+    }
+    .perfilECarrinho {
+      display: none;
+    }
+  }
+  .principal {
+    padding: 1.6rem;
+    display: flex;
+    flex-direction: column;
+    .produto {
+      margin-bottom: 1.6rem;
+      .imagem-hamburguer {
+        text-align: center;
+      }
+      .desktop-only {
+        display: none;
+      }
+      picture {
+        width: 100%;
+        height: 13.096rem;
+      }
+      h3 {
+        margin-top: 2.4rem;
+        margin-bottom: 1.6rem;
+        font-weight: 500;
+        line-height: 16px;
+      }
+      p {
+        color: #4e4e4e;
+        margin-bottom: 1.6rem;
+        font-size: 1.6rem;
+        line-height: 20px;
+      }
+      .preco {
+        display: flex;
+        p {
+          margin-right: 1.7rem;
+          font-size: 1.4rem;
+          line-height: 16px;
+        }
+        p:first-child {
+          color: #e49700;
+        }
+      }
+    }
+    .adicionar-ingredientes {
+      .container-amarelo {
+        display: flex;
+        width: 100%;
+        background-color: rgba(253, 215, 14, 0.2);
+        height: 5.5rem;
+        justify-content: center;
+        flex-direction: column;
+        padding: 0.8rem 1.463rem;
+        margin-bottom: 0.8rem;
+        h4 {
+          font-weight: 500;
+          line-height: 16px;
+        }
+        p {
+          font-size: 12px;
+          line-height: 20px;
+          color: #e49700;
+        }
+      }
+      .quantidades {
+        .ingrediente {
+          margin-bottom: 1.6rem;
+          border-bottom: 1px solid #e8a634;
+          padding-bottom: 1.7rem;
+          .container-quantia {
+            margin-left: auto;
+            max-width: 8.9rem;
+            height: 3.2rem;
+            border: 1px solid #f09035;
+            border-radius: 5px;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            p {
+              font-size: 1.4rem;
+              line-height: 16px;
+            }
+            .menos {
+              border: none;
+              background-color: #aeb6c1;
+              width: 1.4rem;
+              height: 0.2rem;
+              cursor: pointer;
+            }
+            .quantia {
+              font-size: 1.4rem;
+              line-height: 16px;
+              color: #4e4e4e;
+            }
+            .adiciona {
+              padding: 0;
+              border: none;
+              background-color: #ffffff;
+              width: 1.4rem;
+              height: 1.4rem;
+              cursor: pointer;
+              img {
+                width: 100%;
+                height: 100%;
+              }
+            }
+          }
+          p {
+            color: #f09035;
+            font-size: 1.4rem;
+            line-height: 16px;
+          }
+        }
+        .ingrediente-final {
+          padding-bottom: 0;
+          border-bottom: none;
+          margin-bottom: 0.9rem;
+        }
+        .container-amarelo2 {
+          margin-bottom: 0.8rem;
+          width: 100%;
+          height: 5.5rem;
+          padding: 0.8rem 1.463rem 2.4rem;
+          display: flex;
+          background-color: rgba(253, 215, 14, 0.2);
+          p {
+            font-weight: 500;
+            line-height: 16px;
+          }
+        }
+        .escolha-talher {
+          display: flex;
+          flex-direction: column;
+          margin-bottom: 4rem;
+          .escolha {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 0.8rem;
+            label {
+              color: #4e4e4e;
+              font-size: 1.4rem;
+              line-height: 16px;
+            }
+            input {
+              visibility: hidden;
+            }
+
+            input[type='radio']:after {
+              width: 1.6rem;
+              height: 1.6rem;
+              border-radius: 1.6rem;
+              top: -1px;
+              left: -1px;
+              position: relative;
+              content: '';
+              display: inline-block;
+              visibility: visible;
+              border: 1px solid #febc10;
+            }
+
+            input[type='radio']:checked:after {
+              width: 1.6rem;
+              height: 1.6rem;
+              border-radius: 1.6rem;
+              top: -1px;
+              left: -1px;
+              position: relative;
+              content: '';
+              display: inline-block;
+              visibility: visible;
+              background-color: #febc10;
+              border: 1px solid #febc10;
+            }
+          }
+        }
+        .adicionar-produto {
+          display: flex;
+          justify-content: space-between;
+          .container-produto {
+            display: flex;
+            width: 14rem;
+            height: 4rem;
+            border: 1px solid #f09035;
+            border-radius: 5px;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            p {
+              font-size: 1.4rem;
+              line-height: 16px;
+            }
+            .menos {
+              border: none;
+              background-color: #aeb6c1;
+              width: 1.4rem;
+              height: 0.2rem;
+              cursor: pointer;
+            }
+            .quantia {
+              font-size: 1.4rem;
+              line-height: 16px;
+              color: #4e4e4e;
+            }
+            .adiciona {
+              padding: 0;
+              border: none;
+              background-color: #ffffff;
+              width: 1.4rem;
+              height: 1.4rem;
+              cursor: pointer;
+              img {
+                width: 100%;
+                height: 100%;
+              }
+            }
+          }
+          .adicionar-carrinho {
+            font-weight: 500;
+            font-size: 1.4rem;
+            line-height: 10px;
+            text-align: center;
+            letter-spacing: 0.33px;
+            color: #ffffff;
+            border: none;
+            width: 19.5rem;
+            height: 4rem;
+            background: #f09035;
+            border-radius: 4px;
+            cursor: pointer;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  body {
+    header {
+      padding: 1.6rem 4rem;
+      justify-content: space-between;
+      height: 8rem;
+      .link-arrow {
+        display: none;
+      }
+      .logo {
+        width: 22.523rem;
+        height: 4.8rem;
+      }
+      .cabecalho-centro {
+        width: 55.1rem;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        .entrega {
+          padding: 0.8rem;
+          display: flex;
+          justify-content: space-between;
+          flex-direction: column;
+          width: 40%;
+          height: 4.8rem;
+          background-color: #ffffff;
+          box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.1);
+          border-radius: 4px;
+          margin-right: 2.4rem;
+          p {
+            font-size: 1.2rem;
+            letter-spacing: 0.2px;
+            color: #d80000;
+          }
+          select {
+            max-width: 18.6rem;
+            height: 1.6rem;
+            border: none;
+          }
+        }
+        .busca {
+          padding: 0 1.6rem;
+          display: flex;
+          width: 60%;
+          height: 4.8rem;
+          background: #ffffff;
+          border: 1px solid #ed3237;
+          border-radius: 4px;
+        }
+      }
+      .perfilECarrinho {
+        display: flex;
+        align-items: center;
+        a {
+          display: flex;
+          align-items: center;
+          text-decoration: none;
+          img {
+            width: 3.2rem;
+            height: 3.2rem;
+          }
+          p {
+            margin-left: 1rem;
+            margin-right: 2.6rem;
+            font-size: 1.6rem;
+            line-height: 17px;
+            letter-spacing: 0.2px;
+            color: #ed3237;
+          }
+        }
+        .carrinho {
+          position: relative;
+          .quantia-compra {
+            display: none;
+            top: -0.9rem;
+            left: 2.3rem;
+            position: absolute;
+            background-color: #f09035;
+            width: 1.6rem;
+            height: 1.6rem;
+            border-radius: 1.6rem;
+            .popover {
+              cursor: pointer;
+              margin-top: 0.2rem;
+              border: none;
+              background-color: #f09035;
+              margin-left: 0.6rem;
+              font-size: 1rem;
+              color: #ffffff;
+            }
+            .adicionado-sucesso {
+              z-index: 100;
+              position: absolute;
+              top: 50px;
+              left: -100px;
+              width: 20.8rem;
+              display: flex;
+              flex-direction: column;
+              .flecha-cima {
+                margin: 0 auto;
+                width: 0;
+                height: 0;
+                border-left: 8px solid transparent;
+                border-right: 8px solid transparent;
+                border-bottom: 8px solid #f09035;
+              }
+              .container-laranja {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                width: 100%;
+                height: 3.2rem;
+                background-color: #f09035;
+                border-radius: 4px 4px 0px 0px;
+                h3 {
+                  font-family: Roboto Condensed;
+                  font-weight: bold;
+                  color: #fff;
+                }
+              }
+              .ingredientes {
+                padding: 0.8rem 1.1rem;
+                background: #f8f8f8;
+                border-radius: 0px 0px 4px 4px;
+                p:first-child {
+                  font-family: Roboto Condensed;
+                  font-weight: bold;
+                  font-size: 1.4rem;
+                  color: #bc2e31;
+                }
+                p {
+                  font-family: Roboto Condensed;
+                  font-weight: normal;
+                  font-size: 1.2rem;
+                  color: #4e4e4e;
+                }
+                .quantia-ingredientes {
+                  p {
+                    padding: 0 0.5rem;
+                    font-family: Roboto Condensed;
+                    font-weight: normal;
+                    font-size: 1.2rem;
+                    color: #4e4e4e;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+    .principal {
+      padding: 2.4rem 0;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-around;
+      .produto {
+        width: 59.7rem;
+        .mobile-only {
+          display: none;
+        }
+        .desktop-only {
+          display: flex;
+        }
+        .preco {
+          width: fit-content;
+          p {
+            font-size: 3.2rem;
+          }
+        }
+      }
+      .adicionar-ingredientes {
+        width: 43.9rem;
+        padding: 3.2rem;
+        border: 1px solid #686868;
+        border-radius: 8px;
+      }
+    }
+  }
+}

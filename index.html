@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400;700&family=Roboto:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="/assets/css/build/style.min.css"
+    />
+    <!--<link rel="icon" type="image/x-icon" href="/assets/img/logo-mobile.png" /> -->
+    <title>Deliverize</title>
+  </head>
+  <body>
+    <header>
+      <a class="link-arrow" href="#">
+        <img
+          class="arrow"
+          src="/assets/img/keyboard_arrow_left_24px.svg"
+          alt="Flecha apontando para Esquerda"
+        />
+      </a>
+      <img class="logo" src="/assets/img/logo.png" alt="Logo da Deliverize" />
+      <div class="cabecalho-centro">
+        <div class="entrega">
+          <p>Entrega:</p>
+          <select name="endereco" id="endereco">
+            <option value="endereco1">R. Antonio Braune, 222</option>
+          </select>
+        </div>
+        <input
+          class="busca"
+          type="text"
+          placeholder="Busque por estabelecimento ou produtos"
+        />
+      </div>
+      <div class="perfilECarrinho">
+        <a href="#">
+          <img src="/assets/img/account_circle.svg" />
+          <p>Entrar</p>
+        </a>
+        <div class="carrinho">
+          <a href="#">
+          <img src="/assets/img/shopping_cart.svg" />
+          <div class="quantia-compra">
+            <button class="popover">0</button>
+            <div class="adicionado-sucesso">
+              <span class="flecha-cima"></span>
+              <span class="container-laranja"
+                ><h3>Adicionado com Sucesso</h3></span
+              >
+              <div class="ingredientes">
+                <p>Oferta Cheddar Bacon</p>
+                <p>Ingredientes:</p>
+                <div class="quantia-ingredientes">
+                  <p id="qnt1">•</p>
+                  <p id="qnt2">•</p>
+                  <p id="qnt3">•</p>
+                  <p id="qnt4">•</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <p>Carrinho</p></a>
+      </div>
+    </header>
+    <main class="principal">
+      <div class="produto">
+        <div class="imagem-hamburguer">
+          <picture>
+            <source
+              media="(max-width:600px)"
+              srcset="/assets/img/hamburguer-mobile.png"
+            />
+            <img src="/assets/img/hamburguer.png" alt="Hamburguer bonito" />
+          </picture>
+        </div>
+        <h3 class="mobile-only">Oferta picanha cheddar bacon</h3>
+        <h3 id="nm_product" class="desktop-only">0</h3>
+        <p class="mobile-only">
+          Delicioso hambúrguer de picanha, molho de picanha, cebola crispy,
+          bacon, queijo cheddar, molho cheddar e pão mix de gergelim,
+          acompanhamento e bebida.
+        </p>
+        <p id="description" class="desktop-only">
+          0
+        </p>
+        <div class="preco">
+          <p id="vl_discount">0</p>
+          <p><s id="vl_price">R$34,95</s></p>
+        </div>
+      </div>
+      <div class="adicionar-ingredientes">
+        <div class="container-amarelo">
+          <h4>Adicionar Ingredientes</h4>
+          <p>Até 8 ingredientes.</p>
+        </div>
+        <div class="quantidades">
+          <div class="ingrediente">
+            <h4>Queijo cheddar</h4>
+            <div class="container-quantia">
+              <button class="menos subtrai-cheddar"></button>
+              <p class="quantia quantia-cheddar">0</p>
+              <button class="adiciona adiciona-cheddar">
+                <img src="/assets/img/+.svg" alt="Sinal de mais" />
+              </button>
+            </div>
+            <p id="1">0</p>
+          </div>
+          <div class="ingrediente">
+            <h4>Cebola crispy</h4>
+            <div class="container-quantia">
+              <button class="menos subtrai-cebola"></button>
+              <p class="quantia quantia-cebola">0</p>
+              <button class="adiciona adiciona-cebola">
+                <img src="/assets/img/+.svg" alt="Sinal de mais" />
+              </button>
+            </div>
+            <p id="2">0</p>
+          </div>
+          <div class="ingrediente">
+            <h4>Molho cheddar</h4>
+            <div class="container-quantia">
+              <button class="menos subtrai-molhocheddar"></button>
+              <p class="quantia quantia-molhocheddar">0</p>
+              <button class="adiciona adiciona-molhocheddar">
+                <img src="/assets/img/+.svg" alt="Sinal de mais" />
+              </button>
+            </div>
+            <p id="3">0</p>
+          </div>
+          <div class="ingrediente ingrediente-final">
+            <h4>Molho de picanha</h4>
+            <div class="container-quantia">
+              <button class="menos subtrai-molhopicanha"></button>
+              <p class="quantia quantia-molhopicanha">0</p>
+              <button class="adiciona adiciona-molhopicanha">
+                <img src="/assets/img/+.svg" alt="Sinal de mais" />
+              </button>
+            </div>
+            <p id="4">0</p>
+          </div>
+          <span class="container-amarelo2">
+            <h4>Precisa de Talher?</h4>
+          </span>
+          <form class="escolha-talher">
+            <div class="escolha">
+              <label for="sim">Sim</label>
+              <input type="radio" id="sim" name="talher" value="sim" />
+            </div>
+            <div class="escolha">
+              <label for="nao">Não</label>
+              <input type="radio" id="nao" name="talher" value="nao" />
+            </div>
+          </form>
+          <div class="adicionar-produto">
+            <div class="container-produto">
+              <button class="menos subtrai-produto"></button>
+              <p class="quantia quantia-produto">0</p>
+              <button class="adiciona adiciona-produto">
+                <img src="/assets/img/+.svg" alt="Sinal de mais" />
+              </button>
+            </div>
+            <button class="adicionar-carrinho">Adicionar</button>
+          </div>
+        </div>
+      </div>
+    </main>
+    <script type="module" src="/js/script.js"></script>
+  </body>
+</html>
