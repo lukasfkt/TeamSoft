@@ -10,11 +10,17 @@ function getApi(url) {
   return request.responseText
 }
 
-function atribuiPrecosIngredientesExtra(array) {
+function atribuiIngredientesExtra(array) {
+  console.log(array)
   array.forEach(ingrediente => {
-    const ingredientes = document.getElementById(ingrediente.id)
+    const ingredientesValor = document.getElementById(ingrediente.id)
+    const ingredientesNome = document
     const preco = parseFloat(ingrediente.vl_item).toFixed(2)
-    ingredientes.innerText = `+ R$${preco.replace('.', ',')}`
+    const nome = ingrediente.nm_item.split(' ').join('-')
+    const classesIngredientes = document.querySelector(`.${nome}`)
+
+    classesIngredientes.innerText = ingrediente.nm_item
+    ingredientesValor.innerText = `+ R$${preco.replace('.', ',')}`
   })
 }
 
@@ -35,7 +41,7 @@ function atribuiOfertas(produto) {
 
   nomeProduto.innerText = produto.nm_product
   descricaoProduto.innerText = produto.description
-  console.log(produto.url_image)
+  console.log('O URL da imagem não está funcionando:' + produto.url_image)
 }
 
 function main() {
@@ -48,9 +54,7 @@ function main() {
 
   atribuiOfertas(produtoOferta)
   atribuiPrecoOferta(produtoOferta)
-  atribuiPrecosIngredientesExtra(ingredientesExtra)
-
-  console.log(produtoOferta)
+  atribuiIngredientesExtra(ingredientesExtra)
 }
 
 main()
